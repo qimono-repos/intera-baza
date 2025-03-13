@@ -12,6 +12,7 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="9.0.0" />
+    <PackageReference Include="Qimono.Baza.Modeloj" Version="1.0.1" />
   </ItemGroup>
 
 </Project>
