@@ -22,7 +22,8 @@ jobs:
       
       - name: Install WASI workload
         run: dotnet workload install wasi-experimental
-      - name: Install WASM Experimental workload
+
+      - name: Install WADM Tools
         run: dotnet workload install wasm-tools
 
       - name: Verify workload Installation
