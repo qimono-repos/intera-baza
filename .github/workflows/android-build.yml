@@ -27,11 +27,10 @@ jobs:
 
       - name: Verify workload Installation
         run: dotnet workload list
-      - name: Change Directory
-        run: cd Intera
 
       - name: Restore NuGet packages
         run: dotnet restore Intera.csproj
+        working-directory: Intera 
 
       - name: Decode and store keystore file
         run: |
