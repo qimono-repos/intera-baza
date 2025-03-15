@@ -1,12 +1,5 @@
 ﻿@page "/"
-@using Intera.Shared.Services
-@inject IFormFactor FormFactor
 
 <ComponentMovies/>
 
-<p> Qimono 2025 running on <em>@factor</em> using <em>@platform</em>. </p>
-
-@code {
-private string factor => FormFactor.GetFormFactor();
-private string platform => FormFactor.GetPlatform();
-}
+@code { }
