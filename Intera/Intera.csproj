@@ -3,8 +3,10 @@
   <PropertyGroup>
     <!-- <TargetFramework>net9.0-android</TargetFramework> -->
 		<TargetFrameworks>net9.0-android;net9.0-ios</TargetFrameworks>
+    <RuntimeIdentifiers>android-arm64;android-x64</RuntimeIdentifiers>
+    <!-- <RuntimeIdentifiers>browser-wasm;win-x64;osx-x64;android;ios</RuntimeIdentifiers>  -->
 
-    <RuntimeIdentifier Condition="'$(TargetFramework)' == 'net9.0-android'">browser-wasm</RuntimeIdentifier>
+    <!-- <RuntimeIdentifier Condition="'$(TargetFramework)' == 'net9.0-android'">browser-wasm</RuntimeIdentifier> -->
 
     <TargetFrameworks Condition="$([MSBuild]::IsOSPlatform('windows'))">$(TargetFrameworks);net9.0-windows10.0.19041.0</TargetFrameworks>
 
