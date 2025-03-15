@@ -40,8 +40,9 @@ jobs:
         working-directory: ${{ github.workspace }}
 
       - name: Build Android Release
+        working-directory: Intera 
         run: |
-          dotnet publish Demo.csproj -c Release -f net9.0-android `
+          dotnet publish Intera.csproj -c Release -f net9.0-android `
             /p:AndroidKeyStore=true `
             /p:AndroidSigningKeyStore="$env:GITHUB_WORKSPACE\qimono-key.keystore" `
             /p:AndroidSigningKeyAlias="${{ secrets.ANDROID_KEYSTORE_ALIAS }}" `
