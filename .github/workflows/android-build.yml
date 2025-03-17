@@ -19,11 +19,17 @@ jobs:
 
       - name: Install MAUI workload
         run: dotnet workload install maui
+
+      - name: Install Android workload
+        run: dotnet workload install android 
+
+      - name: Install maui-android workload
+        run: dotnet workload install maui-android
       
       - name: Install WASI workload
         run: dotnet workload install wasi-experimental
 
-      - name: Install WADM Tools
+      - name: Install WASM Tools
         run: dotnet workload install wasm-tools
 
       - name: Verify workload Installation
@@ -43,7 +49,8 @@ jobs:
       - name: Build Android Release
         working-directory: Intera 
         run: |
-          dotnet publish Intera.csproj -c Release -f net9.0-android `
+          dotnet publish Intera.csproj -c Release -f net9.0-android  -r android-arm64 `
+            /p:SkipInvalidFrameworks=true `
             /p:AndroidPackageFormat="apk" `
             /p:AndroidKeyStore=true `
             /p:AndroidSigningKeyStore="$env:GITHUB_WORKSPACE\qimono-key.keystore" `
