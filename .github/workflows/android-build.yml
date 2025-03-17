@@ -49,7 +49,7 @@ jobs:
       - name: Build Android Release
         working-directory: Intera 
         run: |
-          dotnet publish Intera.csproj -c Release -f net9.0-android  -r android-arm64 `
+          dotnet publish Intera.csproj -c Release -f net9.0-android  -r android-arm64 -v diagnostic `
             /p:SkipInvalidFrameworks=true `
             /p:AndroidPackageFormat="apk" `
             /p:AndroidKeyStore=true `
