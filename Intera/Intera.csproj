@@ -6,8 +6,8 @@
 		<TargetFrameworks>net9.0-android;net9.0-ios</TargetFrameworks>
     <RuntimeIdentifier>android-arm64</RuntimeIdentifier>
     <!-- <RuntimeIdentifiers>browser-wasm;win-x64;osx-x64;android;ios</RuntimeIdentifiers>  -->
-
     <!-- <RuntimeIdentifier Condition="'$(TargetFramework)' == 'net9.0-android'">browser-wasm</RuntimeIdentifier> -->
+    <SkipValidatePackageReferences>true</SkipValidatePackageReferences>
 
     <TargetFrameworks Condition="$([MSBuild]::IsOSPlatform('windows'))">$(TargetFrameworks);net9.0-windows10.0.19041.0</TargetFrameworks>
 
@@ -37,20 +37,11 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <!-- App Icon -->
     <MauiIcon Include="Resources\AppIcon\appicon.svg" ForegroundFile="Resources\AppIcon\appiconfg.svg" Color="#512BD4" />
-
-    <!-- Splash Screen -->
     <MauiSplashScreen Include="Resources\Splash\splash.svg" Color="#CCCCCC" BaseSize="128,128" />
-
-    <!-- Images -->
     <MauiImage Include="Resources\Images\*" />
     <MauiImage Update="Resources\Images\dotnet_bot.svg" BaseSize="168,208" />
-
-    <!-- Custom Fonts -->
     <MauiFont Include="Resources\Fonts\*" />
-
-    <!-- Raw Assets (also remove the "Resources\Raw" prefix) -->
     <MauiAsset Include="Resources\Raw\**" LogicalName="%(RecursiveDir)%(Filename)%(Extension)" />
   </ItemGroup>
 
