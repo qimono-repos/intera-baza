@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk.Razor">
+﻿<Project Sdk="Microsoft.NET.Sdk.Maui">
 
   <PropertyGroup>
     <!-- <TargetFramework>net9.0-android</TargetFramework> -->
