@@ -2,8 +2,8 @@
 
   <PropertyGroup>
     <!-- <TargetFramework>net9.0-android</TargetFramework> -->
-		<!-- <TargetFrameworks>net9.0-android</TargetFrameworks> -->
-		<TargetFrameworks>net9.0-android;net9.0-ios</TargetFrameworks>
+		<TargetFrameworks>net9.0-android</TargetFrameworks>
+		<!-- <TargetFrameworks>net9.0-android;net9.0-ios</TargetFrameworks> -->
     <RuntimeIdentifier>android-arm64</RuntimeIdentifier>
     <!-- <RuntimeIdentifiers>browser-wasm;win-x64;osx-x64;android;ios</RuntimeIdentifiers>  -->
     <!-- <RuntimeIdentifier Condition="'$(TargetFramework)' == 'net9.0-android'">browser-wasm</RuntimeIdentifier> -->
@@ -46,6 +46,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="Microsoft.AspnetCore.App" Version="2.2.8" />
     <PackageReference Include="Microsoft.Maui.Controls" Version="$(MauiVersion)" />
     <PackageReference Include="Microsoft.AspNetCore.Components.WebView.Maui" Version="$(MauiVersion)" />
     <PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="9.0.0" />
