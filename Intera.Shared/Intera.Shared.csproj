@@ -10,9 +10,9 @@
     <SupportedPlatform Include="browser" />
   </ItemGroup>
 
-  <!-- <ItemGroup> -->
-  <!--   <PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="9.0.1" />  -->
-  <!-- </ItemGroup> -->
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="9.0.1" /> 
+  </ItemGroup>
 
   <!-- <ItemGroup> -->
   <!--   <PackageReference Include="Qimono.Baza.Bloko" Version="1.0.3" /> -->
