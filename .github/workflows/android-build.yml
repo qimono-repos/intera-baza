@@ -2,7 +2,8 @@ name: Android APK
 
 on:
   push:
-    branches: [ trunk ]
+    tags: [ Version* ]
+    # branches: [ trunk ]
 
 jobs:
   build-android:
