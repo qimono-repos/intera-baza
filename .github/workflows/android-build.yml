@@ -68,9 +68,10 @@ jobs:
             throw "APK not found!"
           }
           Write-Host "Found APK: $($apkFiles.FullName)"
+        working-directory: ${{ github.workspace }}
 
       - name: Upload Signed APK
         uses: actions/upload-artifact@v4
         with:
           name: Signed-Android-APK
-          path: bin/Release/net9.0-android/**/*.apk 
+          path: Intera/bin/Release/net9.0-android/**/*.apk 
