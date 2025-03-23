@@ -63,7 +63,7 @@ jobs:
 
       - name: Verify APK Exists
         run: |
-          $apkFiles = Get-ChildItem -Path "bin\Release\net9.0-android" -Recurse -Filter *.apk
+          $apkFiles = Get-ChildItem -Path "Intera\bin\Release\net9.0-android" -Recurse -Filter *.apk
           if ($apkFiles.Count -eq 0) {
             throw "APK not found!"
           }
